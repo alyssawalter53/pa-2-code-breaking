@@ -81,7 +81,8 @@ label and comment.
     code chunk creates the vectors of letters and punctuation.
 
 ``` r
- #make variables 
+#  making vectors for different characters
+
 lower_case <- c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
                 "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z")
 
@@ -94,6 +95,7 @@ punctuation <- c(".", ",", "!", "?", "'", '"', "(", ")", " ", "-", ";", ":")
 2.  Make **one** long **vector** containing all the symbols.
 
 ``` r
+#  long vector with all symbols
 my_symbols <- c(lower_case, upper_case, punctuation)
 ```
 
@@ -101,12 +103,14 @@ my_symbols <- c(lower_case, upper_case, punctuation)
     named “symbol”.
 
 ``` r
+# turning my symbols into a dataframe 
 my_symbols <- data.frame(symbol = my_symbols)
 ```
 
 4.  Find the total number of symbols we have in our data frame.
 
 ``` r
+#   Find the total number of symbols we have in our data frame
 len <- length(my_symbols$symbol)
 ```
 
@@ -114,6 +118,7 @@ len <- length(my_symbols$symbol)
     each symbol.
 
 ``` r
+# assigns number to each symbol in dataframe 
 my_symbols$num <- 1:len
 ```
 
