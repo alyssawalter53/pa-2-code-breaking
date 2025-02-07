@@ -131,6 +131,8 @@ my_symbols$num <- 1:len
 This chunk will load up the encoded secret message as a vector:
 
 ``` r
+# load package, readr, read in data
+  
 library(readr)
 top_secret <- read_csv("https://www.dropbox.com/s/k72h1zewk4gtqep/PA_Secret_Code?dl=1", 
                        col_names = FALSE)$X1
@@ -143,25 +145,33 @@ given** below.
 6.  Add 14 to every number.
 
 ``` r
-ts6 <- top_secret ___________
+# add 14 to every number in top_secret
+
+ts6 <- top_secret + 14
 ```
 
 7.  Multiply every number by 18, then subtract 257.
 
 ``` r
-ts7 <- ts6___________
+# multiply every number in ts6 by 18, then subtract 257
+
+ts7 <- ts6*18 - 257
 ```
 
 8.  Use the `exp()` function to exponentiate every number.
 
 ``` r
-ts8 <- ____(ts7)
+# exponate every number in ts7
+
+ts8 <- exp(ts7)
 ```
 
 9.  Square every number.
 
 ``` r
-ts9 <- 
+# square every number in ts8
+
+ts9 <- ts8^2
 ```
 
 **Checkpoint:** Headquarters has informed you that at this stage of
@@ -178,7 +188,7 @@ land.
 ``` r
 # Write code to verify that there are 352 numbers with values **below** 17
 
-___(ts9 < 17)
+sum(ts9 < 17)
 ```
 
 <!-- Developer Stage your Changes, Commit, and Push to the Git Repository-->
